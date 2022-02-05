@@ -1,0 +1,8 @@
+runtime: python38
+service: deribitgae
+manual_scaling:
+  instances: 1
+entrypoint: gunicorn -b :$PORT -w 2 main:app -t 0
+instance_class: B1
+
+
